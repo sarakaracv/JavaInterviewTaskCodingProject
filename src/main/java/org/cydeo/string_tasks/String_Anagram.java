@@ -10,25 +10,30 @@ public class String_Anagram {
                 same("abc", "abb"); -> false:
 
      */
+    public static void main(String[] args) {
+        String ones= "sara";
+        String twice= "arsa";
+        System.out.println(same(ones,twice));
+    }
 
     // solution 1:
     public static boolean same(String a, String b) {
-        char[] ch1 = a.toCharArray();
-        char[] ch2 = b.toCharArray();
+        char[] char1= a.toCharArray();
+        char[] char2=b.toCharArray();
+        Arrays.sort(char1);
+        Arrays.sort(char2);
 
-        Arrays.sort(ch1);
-        Arrays.sort(ch2);
-        String a1 = "", a2 = "";
-
-        for (char each : ch1) {
-            a1 += each;
-        }
-
-        for (char each : ch2) {
-            a2 += each;
-        }
-
-        return a1.equals(a2);
+       // String a1 = "", a2 = "";
+//        for (char each : ch1) {
+//            a1 += each;
+//        }
+//
+//        for (char each : ch2) {
+//            a2 += each;
+//        }
+//
+//        return a1.equals(a2);
+        return Arrays.equals(char1,char2);
     }
 
 
